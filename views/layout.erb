@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf8">
+  <title><%= @title + ' | Todo' %></title>
+  <link href="/custom.css" rel="stylesheet">
+</head> <body>
+<header>
+  <h1><a href="/">TODO LIST</a></h1>
+  <h2>Such that you remember all of your works</h2>
+</header>
+<div id="main"> <%= yield %>
+</div>
+<footer>
+  <p>&copy;TurnToTech Samples</p>
+</footer>
+</body>
+</html>

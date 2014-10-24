@@ -1,0 +1,18 @@
+<section id="add">
+  <form action="/" method="post">
+    <textarea name="content" placeholder="Todos&hellip;"></textarea>
+      <input type="submit" value="Add Todo item">
+   </form>
+  <ul>
+    <% @todos.each do |item| %>
+    <li>
+        <p>
+          <%= item.content %>
+          <input type="checkbox" name="done" <%= "checked" if item.done %> disabled>
+          <span><a href="/<%= item.id %>">[Edit]</a></span>
+          <a href="/<%= item.id %>/delete">[Del]</a>
+        </p>
+      </li>
+    <% end %>
+  </ul>
+</section>
