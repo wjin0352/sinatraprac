@@ -18,7 +18,7 @@ class Todo
   property :updated_at, DateTime
 end
 
-DataMapper.finalize.auto_upgrade!
+DataMapper.finalize
   # finalizes datamapper model auto upgrade sets up
   # database schema into rows & cols, and updates on changes
 
@@ -44,6 +44,8 @@ post '/' do
   ob.save
   redirect '/'
 end
+
+
 
 get '/:id' do
   @todo = Todo.get params[:id]
